@@ -1,30 +1,119 @@
-/* Reset di base */
+:root {
+    --color-sfondo: #191D7B;
+    --color-viola: #5865F2;
+    --color-viola-secondario: #5D64D1;
+    --color-white: #ffffff;
+    --color-black: #000000;
+}
+
 * {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+h1,
+h2 {
+    font-family: "Sigmar", sans-serif;
+    line-height: 30px;
+    color: var(--color-white);
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+p {
+    font-family: "DM Sans", sans-serif;
+    color: var(--color-white);
+    font-size: 16px;
 }
 
 body {
+    width: 512px;
+    overflow-x: hidden;
+    border: 2px solid #b4b2b2;
+}
+
+main {
+    width: 100%;
+    margin: 0px;
+    padding: 30px 20px;
+    background-color: var(--color-sfondo);
+}
+
+header {
+    background-color: var(--color-sfondo);
+}
+
+header img {
+    width: 100%;
+}
+
+.prima-sezione {
+    padding: 60px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.prima-sezione p {
+    padding: 15px 0px;
+}
+
+.prima-sezione a {
     display: flex;
     justify-content: center;
-}
-
-.container {
-    width: 512px;
-    background-image: url(./img/background.png);
-    background-size: cover;
-    overflow: hidden;
-}
-
-.header-image {
+    align-items: center;
     width: 100%;
-    height: 100%;
-    display: block;
+    height: 60px;
+    text-decoration: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    border-radius: 16px;
+    cursor: pointer;
 }
 
-.header-image img {
+.prima-sezione .btn-download {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    margin-bottom: 15px;
+}
+
+.prima-sezione .btn-open-discord {
+    background-color: var(--color-viola);
+    color: var(--color-white);
+}
+
+.blocco-video {
+    position: relative;
+    padding: 60px 20px;
+    margin: 50px 30px;
+    background-color: var(--color-viola-secondario);
+    border-radius: 30px;
+}
+
+.blocco-video .blocco-icons {
+    width: 100px;
+    height: 100px;
+}
+
+.blocco-video .icon-cube {
+    position: absolute;
+    top: -56px;
+    left: 48px;
+}
+
+.blocco-video .icon-eyes {
+    position: absolute;
+    top: -56px;
+    left: 48px;
+}
+
+.blocco-video p {
+    padding: 15px 0px;
+}
+
+.blocco-video video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    border-radius: 30px;
 }
